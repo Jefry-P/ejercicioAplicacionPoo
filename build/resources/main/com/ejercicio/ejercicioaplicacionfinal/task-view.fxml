@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio.ejercicioaplicacionfinal.TaskController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="52.0" prefWidth="1200.0">
+         <children>
+            <Label text="TAREAS" />
+            <Button fx:id="btnEmployee" mnemonicParsing="false" onAction="#onBtnEmployeeClick" prefHeight="27.0" prefWidth="116.0" text="Empleados" />
+         </children>
+      </VBox>
+      <VBox prefHeight="195.0" prefWidth="1200.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="1200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" text="Registro de tareas:">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="151.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="144.0" prefWidth="330.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="82.0" prefWidth="286.0" spacing="5.0">
+                           <children>
+                              <Label text="Precio:" />
+                              <TextField fx:id="txtPrice" />
+                           </children></HBox>
+                        <HBox alignment="CENTER" prefHeight="84.0" prefWidth="286.0" spacing="5.0">
+                           <children>
+                              <Label text="Descripcion:">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin></Label>
+                              <TextArea fx:id="txtADescription" prefHeight="73.0" prefWidth="173.0" />
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="144.0" prefWidth="330.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="66.0" prefWidth="286.0" spacing="5.0">
+                           <children>
+                              <Label text="Fecha:" />
+                              <TextField fx:id="txtDate" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="286.0" spacing="5.0">
+                           <children>
+                              <Label text="Empleado:" />
+                              <ComboBox fx:id="cmbEmployee" prefWidth="150.0" />
+
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="144.0" prefWidth="330.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="85.0" prefWidth="492.0" spacing="5.0">
+                           <children>
+                              <Label text="Categoria:" />
+                              <ComboBox fx:id="cmbCategory" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="144.0" prefWidth="385.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="144.0" prefWidth="384.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#onBtnInsertClick" prefHeight="47.0" prefWidth="128.0" text="Ingresar" />
+                              <Button fx:id="btnCleanFields" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="125.0" text="Limpiar" />
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="580.0" prefWidth="1200.0">
+         <children>
+            <HBox prefHeight="36.0" prefWidth="1200.0">
+               <children>
+                  <Label text="Consultar">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1200.0" spacing="10.0">
+               <children>
+                  <Label text="Categoria:" />
+                  <ComboBox fx:id="cmbCategoryFind" prefWidth="150.0" />
+                  <Button fx:id="btnCleanTable" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" text="Limpiar" />
+               </children>
+            </HBox>
+            <ListView fx:id="lvCategory" prefHeight="482.0" prefWidth="1200.0" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

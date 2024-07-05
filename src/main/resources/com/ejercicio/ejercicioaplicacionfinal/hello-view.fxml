@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio.ejercicioaplicacionfinal.HelloController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="52.0" prefWidth="1200.0">
+         <children>
+            <Label text="EMPLEADOS" />
+            <Button fx:id="btnTask" mnemonicParsing="false" onAction="#onBtnTaskClick" prefHeight="36.0" prefWidth="62.0" text="Tareas" />
+         </children>
+      </VBox>
+      <VBox prefHeight="195.0" prefWidth="1200.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="1200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" text="Registro de empleados:">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="151.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="208.0" prefWidth="494.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="85.0" prefWidth="492.0" spacing="5.0">
+                           <children>
+                              <Label text="Nombre: " />
+                              <TextField fx:id="txtName" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="96.0" prefWidth="492.0" spacing="5.0">
+                           <children>
+                              <Label text="Apellidos:" />
+                              <TextField fx:id="txtLastname" />
+                           </children></HBox>
+                     </children></VBox>
+                  <VBox prefHeight="149.0" prefWidth="710.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="149.0" prefWidth="612.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btnInsert" mnemonicParsing="false" onAction="#onBtnInsertClick" prefHeight="47.0" prefWidth="128.0" text="Ingresar" />
+                              <Button fx:id="btnCleanFields" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="125.0" text="Limpiar" />
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="580.0" prefWidth="1200.0">
+         <children>
+            <HBox prefHeight="36.0" prefWidth="1200.0">
+               <children>
+                  <Label text="Consultar">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="1200.0" spacing="10.0">
+               <children>
+                  <Label text="ID empleado:" />
+                  <TextField fx:id="txtIdEmployee" />
+                  <Label text="Rango de fechas:" />
+                  <TextField fx:id="txtDate1" prefHeight="24.0" prefWidth="80.0" />
+                  <Label text="-" />
+                  <TextField fx:id="txtDate2" prefHeight="24.0" prefWidth="74.0" />
+                  <Button mnemonicParsing="false" onAction="#onBtnConsultarClick" prefHeight="32.0" prefWidth="124.0" text="Consultar" />
+                  <Button fx:id="btnCleanTable" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" text="Limpiar" />
+               </children>
+            </HBox>
+            <ListView fx:id="lvTask" prefHeight="482.0" prefWidth="1200.0" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
